@@ -7,55 +7,58 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Product Lead',
       role: 'Head of Product',
-      company: 'TechCorp',
-      content: 'Shivasish brought exceptional clarity to our AI product strategy. His ability to translate complex technical concepts into actionable business plans was instrumental in our successful product launch.',
+      company: 'UK-based Healthcare Organization',
+      content:
+        'Shivasish played a key role in shaping our AI product roadmap. He was able to bridge technical possibilities with real operational needs, which helped us move from abstract ideas to something teams could actually use.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'DataFlow Solutions',
-      content: 'Outstanding execution and communication. Shivasish delivered our RAG pipeline project ahead of schedule and his stakeholder management skills kept everyone aligned throughout the process.',
+      name: 'Engineering Manager',
+      role: 'Platform & AI',
+      company: 'Enterprise Analytics Firm',
+      content:
+        'What stood out was his ability to work comfortably with both engineers and business stakeholders. Requirements were clear, priorities were realistic, and delivery stayed on track even as scope evolved.',
       rating: 5
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'VP of Strategy',
-      company: 'InnovateLabs',
-      content: 'His strategic thinking and business acumen are impressive. Shivasish helped us identify key market opportunities and developed a roadmap that increased our product adoption by 40%.',
+      name: 'Strategy Director',
+      role: 'Business & Growth',
+      company: 'Global Marketing Technology Company',
+      content:
+        'Shivasish brought structure to a very complex problem space. His approach to analytics and product strategy helped us focus on what actually mattered, rather than chasing every possible feature.',
       rating: 5
     },
     {
-      name: 'David Thompson',
-      role: 'Founder',
-      company: 'StartupAI',
-      content: 'Incredible value delivered from day one. Shivasish\'s expertise in both AI technology and product management helped us secure our Series A funding with a clear go-to-market strategy.',
+      name: 'Founder',
+      role: 'CEO',
+      company: 'Early-Stage AI Startup',
+      content:
+        'He quickly understood our product challenges and helped us clarify our positioning and roadmap. The outcome wasn’t just better planning, but better conversations with investors and customers.',
       rating: 5
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-teal-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            What People Say
+          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-teal-600 to-fuchsia-500 mb-6 drop-shadow-lg">
+            What Colleagues & Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take my word for it. Here's what colleagues and clients say about 
-            working with me on AI products and strategic initiatives.
+          <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
+            Feedback from people I’ve worked closely with across product, engineering, and business teams.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={`${testimonial.name}-${index}`}
@@ -64,8 +67,8 @@ const Testimonials = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 group">
-                <CardContent className="p-8">
+              <Card className="h-full hover:shadow-2xl transition-all duration-300 group bg-gradient-to-br from-white to-blue-50 border-0">
+                <CardContent className="p-10">
                   <div className="flex items-center mb-4">
                     <Quote className="w-8 h-8 text-blue-500 mr-3" />
                     <div className="flex space-x-1">
@@ -75,14 +78,14 @@ const Testimonials = () => {
                     </div>
                   </div>
                   
-                  <blockquote className="text-gray-700 leading-relaxed mb-6 italic">
-                    "{testimonial.content}"
+                  <blockquote className="text-gray-700 leading-relaxed mb-6 italic text-lg">
+                    “{testimonial.content}”
                   </blockquote>
                   
                   <div className="border-t pt-4">
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-blue-600 text-sm">{testimonial.role}</div>
-                    <div className="text-gray-500 text-sm">{testimonial.company}</div>
+                    <div className="font-semibold text-blue-700 text-lg">{testimonial.name}</div>
+                    <div className="text-blue-600 text-base">{testimonial.role}</div>
+                    <div className="text-gray-500 text-base">{testimonial.company}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -99,11 +102,11 @@ const Testimonials = () => {
         >
           <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Join the Success Stories
+              Let’s Build the Next Success Story
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Ready to add your success story to this list? Let's work together to transform 
-              your product vision into reality with strategic AI implementation.
+              If you’re working through a product, AI, or strategy challenge, I’d be happy to explore
+              how we can solve it together — thoughtfully and pragmatically.
             </p>
           </div>
         </motion.div>

@@ -7,9 +7,9 @@ import { ArrowRight, Brain, Rocket, Map, TrendingUp } from 'lucide-react';
 
 const Services = () => {
   const handleBookCall = (serviceTitle: string) => {
-    const subject = encodeURIComponent(`Booking Inquiry - ${serviceTitle}`);
+    const subject = encodeURIComponent(`Consultation Inquiry — ${serviceTitle}`);
     const body = encodeURIComponent(
-      `Hi Shivasish,\n\nI'm interested in booking a call to discuss your ${serviceTitle} service.\n\nPlease let me know your availability.\n\nBest regards,`
+      `Hi Shivasish,\n\nI’d like to discuss how you can help with ${serviceTitle}.\n\nLooking forward to connecting.\n\nBest regards,`
     );
     window.open(`mailto:mahapatrashiv05@gmail.com?subject=${subject}&body=${body}`);
   };
@@ -26,148 +26,181 @@ const Services = () => {
 
   const services = [
     {
-      title: 'AI Product Strategy & Gen AI Consulting',
+      title: 'GenAI Product Strategy & Advisory',
       icon: Brain,
-      description: 'Transform your business with strategic Gen AI and LLM integration, focusing on product-market fit, technical feasibility, and data-driven go-to-market strategies.',
+      description:
+        'I help organizations define clear, executable GenAI product strategies — aligning business goals, user needs, and technical feasibility to ensure AI initiatives deliver real value.',
       features: [
-        'Gen AI & LLM Product Strategy',
-        'Agile SDLC Implementation',
-        'Business Analytics Integration',
-        'Product-Market Fit Validation'
+        'GenAI & LLM product positioning',
+        'Use-case discovery & prioritization',
+        'Agile delivery frameworks',
+        'Product-market fit validation'
       ],
       gradient: 'from-blue-500 to-blue-700'
     },
     {
-      title: 'Product Lifecycle Management',
+      title: 'End-to-End Product Lifecycle Execution',
       icon: Rocket,
-      description: 'Define and scope your Minimum Viable Product using Agile methodologies and Business Analytics insights, ensuring optimal resource allocation and rapid time-to-market.',
+      description:
+        'From idea to production, I lead products through discovery, MVP definition, delivery, and iteration — ensuring speed, clarity, and measurable outcomes.',
       features: [
-        'Agile Product Development',
-        'Scrum Framework Implementation',
-        'Business Analytics Roadmapping',
-        'Resource & Timeline Estimation'
+        'MVP scoping & roadmap planning',
+        'Scrum & Agile execution',
+        'Cross-functional team leadership',
+        'Delivery timelines & risk management'
       ],
       gradient: 'from-teal-500 to-teal-700'
     },
     {
-      title: 'Strategic Product Planning & Analytics',
+      title: 'Product Strategy, Analytics & Decision Systems',
       icon: Map,
-      description: 'Develop comprehensive product strategies and roadmaps using Business Analytics and Agile methodologies that align with business objectives and market opportunities.',
+      description:
+        'I design data-driven product strategies that help teams make better decisions using analytics, KPIs, and clear performance signals.',
       features: [
-        'Data-Driven Product Strategy',
-        'Business Analytics Integration',
-        'Stakeholder Alignment Workshops',
-        'KPI Framework Development'
+        'Data-driven product strategy',
+        'Analytics-backed roadmap planning',
+        'Stakeholder alignment workshops',
+        'KPI & success metrics design'
       ],
       gradient: 'from-orange-500 to-orange-700'
     },
     {
-      title: 'Digital Transformation & AI Advisory',
+      title: 'Digital Transformation & AI Enablement',
       icon: TrendingUp,
-      description: 'Strategic advisory for organizations looking to leverage Gen AI, LLM technologies, and Business Analytics for competitive advantage and sustainable growth.',
+      description:
+        'Advisory support for organizations adopting AI — helping leadership teams navigate change, align teams, and implement scalable AI solutions responsibly.',
       features: [
-        'Gen AI Implementation Strategy',
-        'Business Analytics Transformation',
-        'Agile Organizational Change',
-        'Technology Stack Recommendations'
+        'AI adoption & transformation strategy',
+        'Operating model & process alignment',
+        'Agile change management',
+        'Technology & platform recommendations'
       ],
       gradient: 'from-purple-500 to-purple-700'
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Services Offered
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="inline-block mb-6"
+          >
+            <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/50 text-purple-300 text-sm font-semibold backdrop-blur-sm">
+              What I Do
+            </span>
+          </motion.div>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            How I Help Teams Succeed
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive product management and Gen AI strategy services using Agile methodologies 
-            and Business Analytics to help your business unlock the full potential of artificial intelligence.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            I work with teams to design, build, and scale AI-driven products — combining strong product thinking,
+            GenAI expertise, and disciplined execution.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              className="group"
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 group cursor-pointer overflow-hidden">
-                <CardHeader className="relative">
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.gradient} text-white rounded-xl mb-4`}
-                    >
-                      <service.icon className="w-8 h-8" />
-                    </motion.div>
-                    <CardTitle className="text-2xl mb-4 group-hover:text-blue-700 transition-colors">
-                      {service.title}
-                    </CardTitle>
-                    <p className="text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Deliverables:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <Button 
-                    className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90 group/btn mt-6`}
-                    onClick={() => handleBookCall(service.title)}
+              <div className="relative h-full rounded-2xl overflow-hidden backdrop-blur-sm border border-purple-400/20 hover:border-purple-400/50 transition-colors duration-300">
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`} />
+                
+                <div className="relative p-8 h-full flex flex-col">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.gradient} text-white rounded-xl mb-6 shadow-lg`}
                   >
-                    Book a Call
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </Card>
+                    <service.icon className="w-8 h-8" />
+                  </motion.div>
+
+                  <h3 className="text-2xl font-bold mb-4 tracking-tight text-white">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed text-base mb-6 flex-grow">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-3 mb-8">
+                    {service.features.map((feature) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3 }}
+                        viewport={{ once: true }}
+                        className="flex items-start gap-3"
+                      >
+                        <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient}`} />
+                        <span className="text-sm text-gray-300">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => handleBookCall(service.title)}
+                    className={`w-full py-3 px-4 rounded-lg font-semibold text-white bg-gradient-to-r ${service.gradient} hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-auto`}
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Product Strategy with Gen AI?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can leverage Gen AI, Business Analytics, and Agile methodologies 
-              to drive your business forward. Schedule a consultation to explore opportunities.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-blue-700 hover:bg-blue-800"
-              onClick={handleScheduleConsultation}
-            >
-              Schedule Free Consultation
-            </Button>
+          <div className="relative rounded-2xl overflow-hidden backdrop-blur-md border border-purple-400/30 p-10 group">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 group-hover:from-purple-600/20 group-hover:to-cyan-600/20 transition-all duration-300" />
+            <div className="relative z-10">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Want to Build Something Impactful?
+              </h3>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
+                Let’s explore how thoughtful product strategy, GenAI, and strong execution
+                can turn complex ideas into real-world outcomes.
+              </p>
+              <motion.button
+                onClick={handleScheduleConsultation}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg"
+              >
+                Start a Conversation
+              </motion.button>
+            </div>
           </div>
         </motion.div>
       </div>

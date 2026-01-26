@@ -1,8 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Fira_Sans } from 'next/font/google';
+import CustomCursor from '@/components/ui/CustomCursor';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const fira = Fira_Sans({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-fira' });
 
 export const metadata: Metadata = {
   title: 'Shivasish Mahapatra - Product Manager | AI Strategist',
@@ -19,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${fira.variable}`}>
+      <body className="antialiased font-sans bg-gradient-to-br from-blue-50 via-white to-teal-50 min-h-screen">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

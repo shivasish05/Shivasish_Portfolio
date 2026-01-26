@@ -32,9 +32,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center space-y-8">
+    <footer className="bg-gradient-to-br from-blue-900 via-gray-900 to-teal-900 text-white py-16 mt-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="flex flex-col items-center space-y-12">
           {/* Back to Top Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,10 +45,11 @@ const Footer = () => {
             <Button
               onClick={scrollToTop}
               variant="outline"
-              size="sm"
-              className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
+              size="lg"
+              className="border-blue-400 text-blue-200 hover:bg-blue-800 hover:text-white shadow-lg px-8 py-3 text-lg font-semibold rounded-full"
+              aria-label="Back to Top"
             >
-              <ArrowUp className="w-4 h-4 mr-2" />
+              <ArrowUp className="w-5 h-5 mr-2" />
               Back to Top
             </Button>
           </motion.div>
@@ -61,11 +62,11 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+            <h3 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 via-teal-400 to-fuchsia-400 bg-clip-text text-transparent mb-2 tracking-tight drop-shadow-lg">
               Shivasish Mahapatra
             </h3>
-            <p className="text-gray-400 mt-2">
-              Product Manager | Gen AI Strategist | Business Analytics Consultant
+            <p className="text-blue-200 mt-2 text-lg font-medium">
+              Project Manager · GenAI Delivery · Business & Product Strategy
             </p>
           </motion.div>
 
@@ -75,7 +76,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-6"
+            className="flex flex-wrap justify-center gap-8"
           >
             {[
               { name: 'About', href: '#about' },
@@ -88,7 +89,9 @@ const Footer = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer"
+                className="text-blue-200 hover:text-white transition-colors duration-200 cursor-pointer text-lg font-semibold px-4 py-2 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                tabIndex={0}
+                aria-label={item.name}
               >
                 {item.name}
               </a>
@@ -96,7 +99,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Divider */}
-          <div className="w-full border-t border-gray-800" />
+          <div className="w-full border-t border-blue-800" />
 
           {/* Copyright and Attribution */}
           <motion.div
@@ -106,11 +109,11 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-center space-y-2"
           >
-            <p className="text-gray-400 text-sm">
-              © 2025 Shivasish Mahapatra. All rights reserved.
+            <p className="text-blue-200 text-base">
+              © 2026 Shivasish Mahapatra. All rights reserved.
             </p>
-            <p className="text-gray-500 text-xs flex items-center justify-center">
-              Built with <Heart className="w-3 h-3 mx-1 text-red-500" /> using Next.js, Tailwind CSS, and Framer Motion
+            <p className="text-blue-300 text-sm flex items-center justify-center">
+              Designed and built with <Heart className="w-4 h-4 mx-1 text-fuchsia-400 animate-pulse" /> using modern web technologies
             </p>
           </motion.div>
 
@@ -120,19 +123,20 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center bg-gradient-to-r from-blue-900 to-teal-900 p-6 rounded-xl"
+            className="text-center bg-gradient-to-r from-blue-800 via-fuchsia-700 to-teal-800 p-10 rounded-2xl shadow-xl mt-8"
           >
-            <h4 className="text-lg font-semibold text-white mb-2">
-              Ready to Transform Your Product Strategy with Gen AI?
+            <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">
+              Have a Product or AI Challenge to Solve?
             </h4>
-            <p className="text-gray-300 text-sm mb-4">
-              Let's discuss how Gen AI, Business Analytics, and Agile methodologies can drive your business forward.
+            <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+              Let’s explore how GenAI, analytics, and strong product execution can create real, measurable impact.
             </p>
             <Button 
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-gradient-to-r from-blue-600 to-fuchsia-500 hover:from-blue-700 hover:to-fuchsia-600 text-lg px-8 py-4 shadow-lg rounded-full"
               onClick={handleScheduleCall}
+              aria-label="Schedule a Call"
             >
-              Schedule a Call
+              Start a Conversation
             </Button>
           </motion.div>
         </div>

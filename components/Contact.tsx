@@ -30,7 +30,7 @@ const Contact = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Shivasish Resume Product New (1).pdf';
+    link.href = '/Shivasish_Resume.pdf';
     link.download = 'Shivasish_Mahapatra_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -42,14 +42,12 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       setSubmitStatus('error');
       setIsSubmitting(false);
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setSubmitStatus('error');
@@ -58,20 +56,18 @@ const Contact = () => {
     }
 
     try {
-      // Simulate form submission (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // For now, we'll just open the email client with pre-filled data
-      const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio Website');
+
+      const subject = encodeURIComponent(formData.subject || 'Message from Portfolio Website');
       const body = encodeURIComponent(
         `Name: ${formData.firstName} ${formData.lastName}\n` +
         `Email: ${formData.email}\n` +
         `Company: ${formData.company || 'Not specified'}\n\n` +
         `Message:\n${formData.message}`
       );
-      
+
       window.open(`mailto:mahapatrashiv05@gmail.com?subject=${subject}&body=${body}`);
-      
+
       setSubmitStatus('success');
       setFormData({
         firstName: '',
@@ -95,16 +91,10 @@ const Contact = () => {
       value: 'mahapatrashiv05@gmail.com',
       link: 'mailto:mahapatrashiv05@gmail.com'
     },
-    // {
-    //   icon: Phone,
-    //   title: 'Phone',
-    //   value: '+1 (555) 123-4567',
-    //   link: 'tel:+15551234567'
-    // },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Available for Remote & On-site',
+      value: 'Open to Remote & On-site Opportunities',
       link: null
     }
   ];
@@ -115,7 +105,6 @@ const Contact = () => {
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/shivmahapatra/'
     },
-
     {
       icon: Mail,
       name: 'Email',
@@ -134,11 +123,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Let's Connect
+            Let’s Build Something Meaningful
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to discuss your next AI product or need strategic product management guidance? 
-            I'm here to help turn your vision into reality.
+            Whether you’re exploring AI-driven products, looking for strategic product leadership,
+            or considering a collaboration — I’m always open to meaningful conversations.
           </p>
         </motion.div>
 
@@ -154,8 +143,9 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Whether you're a startup founder looking to build AI products, a company seeking 
-                product strategy guidance, or a recruiter interested in my background, I'd love to hear from you.
+                I work with founders, business leaders, and engineering teams to design and deliver
+                scalable AI products. If you have an idea, a challenge, or an opportunity to explore —
+                let’s connect.
               </p>
             </div>
 
@@ -186,7 +176,7 @@ const Contact = () => {
             </div>
 
             <div className="pt-8 border-t border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-4">Connect on Social</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Connect Elsewhere</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <motion.a
@@ -207,12 +197,12 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               className="bg-blue-700 text-white p-6 rounded-xl"
             >
-              <h4 className="font-semibold mb-2">Download My Resume</h4>
+              <h4 className="font-semibold mb-2">Download Resume</h4>
               <p className="text-blue-100 text-sm mb-4">
-                Get a detailed overview of my experience, projects, and achievements.
+                A concise overview of my experience, projects, and leadership journey.
               </p>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="bg-white text-blue-700 hover:bg-gray-100"
                 onClick={handleResumeDownload}
               >
@@ -240,11 +230,11 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         First Name *
                       </label>
-                      <Input 
+                      <Input
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        placeholder="John" 
+                        placeholder="First name"
                         required
                       />
                     </div>
@@ -252,81 +242,81 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Last Name *
                       </label>
-                      <Input 
+                      <Input
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        placeholder="Doe" 
+                        placeholder="Last name"
                         required
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Email *
                     </label>
-                    <Input 
-                      type="email" 
+                    <Input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="john.doe@example.com" 
+                      placeholder="you@company.com"
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Company (Optional)
                     </label>
-                    <Input 
+                    <Input
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      placeholder="Your Company" 
+                      placeholder="Organization / Startup"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Subject
                     </label>
-                    <Input 
+                    <Input
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      placeholder="Project Discussion / Consulting Inquiry" 
+                      placeholder="Product discussion, collaboration, or opportunity"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
                     </label>
-                    <Textarea 
+                    <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={6}
-                      placeholder="Tell me about your project, challenges, or how I can help you achieve your goals..."
+                      placeholder="Share a bit about what you're building, the challenge you're facing, or how I can help..."
                       required
                     />
                   </div>
-                  
+
                   {submitStatus === 'error' && (
                     <p className="text-red-600 text-sm">
-                      Please fill in all required fields and provide a valid email address.
+                      Please complete all required fields with a valid email address.
                     </p>
                   )}
-                  
+
                   {submitStatus === 'success' && (
                     <p className="text-green-600 text-sm">
-                      Thank you! Your message has been sent successfully.
+                      Thanks for reaching out — I’ll get back to you shortly.
                     </p>
                   )}
-                  
-                  <Button 
+
+                  <Button
                     type="submit"
                     className="w-full bg-blue-700 hover:bg-blue-800 group"
                     disabled={isSubmitting}
@@ -343,9 +333,9 @@ const Contact = () => {
                       </>
                     )}
                   </Button>
-                  
+
                   <p className="text-sm text-gray-500 text-center">
-                    I typically respond within 24 hours. For urgent matters, please call directly.
+                    I usually respond within 24 hours.
                   </p>
                 </form>
               </CardContent>

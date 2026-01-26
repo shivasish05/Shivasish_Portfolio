@@ -1,0 +1,2 @@
+// Placeholder profile image for Hero section. Replace with your own for a personal touch.
+// Source: https://randomuser.me/api/portraits/men/32.jpg (royalty-free placeholder)

@@ -12,14 +12,14 @@ const Skills = () => {
       icon: Briefcase,
       color: 'blue',
       skills: [
-        'Agile SDLC',
-        'Scrum Framework',
-        'Product Lifecycle',
-        'MVP Development',
-        'GTM Strategy',
-        'Product Roadmaps',
-        'Prioritization Frameworks (RICE, MoSCoW)',
-        'Stakeholder Management',
+        'Agile Product Delivery',
+        'Scrum & Sprint Execution',
+        'End-to-End Product Lifecycle',
+        'MVP Definition & Validation',
+        'Go-To-Market Strategy',
+        'Product Roadmapping',
+        'Prioritization (RICE, MoSCoW)',
+        'Stakeholder & Client Management',
         'Jira',
         'Notion',
         'Confluence',
@@ -28,24 +28,24 @@ const Skills = () => {
       ]
     },
     {
-      title: 'AI & Technology',
+      title: 'GenAI & Technology',
       icon: Code2,
       color: 'teal',
       skills: [
-        'Gen AI',
+        'Generative AI Systems',
         'Prompt Engineering',
         'LLM Integration',
-        'RAG Pipelines',
+        'RAG Architectures',
         'LangChain',
         'FastAPI',
-        'API Integration',
-        'Machine Learning',
+        'API Design & Integration',
+        'Machine Learning Fundamentals',
         'Python',
         'SQL',
         'Azure OpenAI',
         'Databricks',
         'MongoDB',
-        'Vector Search'
+        'Vector Databases & Search'
       ]
     },
     {
@@ -53,15 +53,15 @@ const Skills = () => {
       icon: BarChart3,
       color: 'orange',
       skills: [
-        'Business Analytics',
-        'Data Analytics',
+        'Business & Product Analytics',
+        'Data Analysis',
         'Power BI',
         'Tableau',
         'Data Modeling',
-        'Statistical Analysis',
-        'KPI Development',
-        'Dashboard Design',
-        'Performance Metrics',
+        'Statistical Thinking',
+        'KPI & Metrics Design',
+        'Dashboarding & Reporting',
+        'Performance Monitoring',
         'Google Analytics'
       ]
     },
@@ -70,20 +70,19 @@ const Skills = () => {
       icon: Users,
       color: 'purple',
       skills: [
-        'Product Strategy',
-        'Cross-functional Leadership',
-        'Strategic Thinking',
+        'Product & Platform Strategy',
+        'Cross-Functional Leadership',
+        'Strategic Problem Solving',
         'Customer Journey Mapping',
-        'OKRs and KPIs',
-        'Communication',
+        'OKRs & Outcome Tracking',
+        'Executive Communication',
         'Business Storytelling',
-        'Problem Solving',
-        'Change Management',
-        'Mentoring'
+        'Decision Making Under Ambiguity',
+        'Change & Transformation Management',
+        'Mentoring & Team Enablement'
       ]
     }
   ];
-  
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -112,25 +111,25 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 bg-gradient-to-br from-white via-blue-50 to-teal-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-teal-600 to-fuchsia-500 mb-6 drop-shadow-lg">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A comprehensive toolkit spanning modern product management methodologies, 
-            Gen AI technologies, Business Analytics, and strategic leadership to drive innovation and business growth.
+          <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
+            A balanced blend of product leadership, GenAI systems, analytics, and strategic thinking —
+            enabling teams to build scalable products and deliver measurable business outcomes.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -139,11 +138,11 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 group">
+              <Card className="h-full hover:shadow-2xl transition-all duration-300 group bg-gradient-to-br from-white to-blue-50 border-0">
                 <CardHeader className="text-center pb-4">
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className={`inline-flex items-center justify-center w-16 h-16 ${getColorClasses(category.color).bg} rounded-full mb-4 mx-auto group-hover:scale-110 transition-transform`}
+                    whileHover={{ scale: 1.12 }}
+                    className={`inline-flex items-center justify-center w-16 h-16 ${getColorClasses(category.color).bg} rounded-full mb-4 mx-auto group-hover:scale-110 transition-transform shadow-lg`}
                   >
                     <category.icon className={`w-8 h-8 ${getColorClasses(category.color).text}`} />
                   </motion.div>
@@ -152,7 +151,7 @@ const Skills = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {category.skills.map((skill) => (
                       <Badge
                         key={skill}
@@ -178,11 +177,11 @@ const Skills = () => {
         >
           <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Continuous Learning & Growth
+              Continuous Learning & Evolution
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Staying at the forefront of Gen AI, product management trends, and Business Analytics through continuous learning, 
-              industry certifications, and hands-on experimentation with emerging technologies and Agile methodologies.
+              I continuously refine my skills by staying close to real-world delivery — experimenting with
+              emerging GenAI capabilities, evolving product practices, and learning from each product shipped.
             </p>
           </div>
         </motion.div>

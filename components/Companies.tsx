@@ -25,11 +25,10 @@ const Companies = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Trusted by Leading Organizations
+            Trusted by Global & High-Impact Organizations
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            I've had the privilege to work with diverse companies across industries, 
-            delivering AI-driven solutions and strategic product insights.
+            I’ve collaborated with leading organizations across healthcare, sports, marketing, logistics, and enterprise technology—delivering AI-driven products and strategic solutions at scale.
           </p>
         </motion.div>
 
@@ -66,7 +65,7 @@ const Companies = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-500 text-sm">
-            From healthcare and sports to fintech and logistics - delivering impact across diverse sectors
+            Delivering measurable impact across healthcare, sports analytics, marketing intelligence, fintech, and global logistics
           </p>
         </motion.div>
       </div>

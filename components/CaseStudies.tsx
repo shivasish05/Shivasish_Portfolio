@@ -20,72 +20,87 @@ const CaseStudies = () => {
       title: 'Healthcare Analytics Product Strategy',
       company: 'NHS UK',
       icon: BarChart3,
-      tools: ['Agile SDLC', 'Scrum', 'Business Analytics', 'Stakeholder Management'],
+      tools: ['Agile Delivery', 'Product Strategy', 'Business Analytics', 'Stakeholder Alignment'],
       industry: 'Healthcare',
-      problem: 'NHS needed a comprehensive product strategy to improve patient care efficiency and resource allocation across multiple facilities, but lacked clear product direction and stakeholder alignment.',
-      strategy: 'Led end-to-end product strategy development using Agile methodology, including market analysis, user research, and stakeholder workshops to define product vision and roadmap for healthcare analytics platform.',
-      execution: 'Managed cross-functional Scrum teams, conducted user interviews with healthcare professionals, developed product requirements through iterative sprints, and created go-to-market strategy with measurable KPIs.',
-      outcome: '35% improvement in resource allocation efficiency, 20% reduction in patient wait times, and successful stakeholder buy-in across 15+ healthcare facilities through data-driven Business Analytics.',
+      problem:
+        'Healthcare teams struggled with fragmented data, inefficient resource planning, and limited visibility into patient-care operations, resulting in delayed decisions and suboptimal outcomes.',
+      strategy:
+        'Defined a clear product vision and analytics-led strategy by working closely with clinical and operational stakeholders. Established a roadmap focused on improving care efficiency, data accessibility, and decision support.',
+      execution:
+        'Led cross-functional Agile teams, facilitated stakeholder workshops, translated requirements into sprint-ready user stories, and guided delivery through iterative releases with outcome-focused KPIs.',
+      outcome:
+        'Improved resource allocation efficiency by 35%, reduced patient wait times by 20%, and achieved strong adoption across multiple healthcare facilities through data-driven decision support.',
       gradient: 'from-blue-500 to-blue-700'
     },
     {
       title: 'Sports Performance Intelligence Platform',
       company: 'Rajasthan Royals',
       icon: TrendingUp,
-      tools: ['Product Lifecycle', 'Gen AI', 'Performance Analytics', 'Agile Scrum'],
+      tools: ['GenAI', 'Product Lifecycle', 'Performance Analytics', 'Agile Scrum'],
       industry: 'Sports Analytics',
-      problem: 'Coaching staff struggled to make data-driven decisions during matches due to complex data access and lack of intuitive insights delivery system.',
-      strategy: 'Designed and launched an intuitive performance intelligence platform leveraging Gen AI capabilities that transformed complex sports data into actionable insights for real-time decision making.',
-      execution: 'Led product discovery through Agile methodology, defined user personas, prioritized features based on coaching needs using Scrum framework, and managed complete product lifecycle from concept to launch.',
-      outcome: '10x faster access to performance insights through Gen AI integration, 45% improvement in match preparation efficiency, and increased adoption by 80% of coaching staff within 3 months.',
+      problem:
+        'Coaching staff relied on manual analysis and scattered data sources, limiting their ability to make fast, data-backed decisions during match preparation and live gameplay.',
+      strategy:
+        'Conceptualized and launched a performance intelligence platform that transformed complex match and player data into intuitive, real-time insights using GenAI-driven analytics.',
+      execution:
+        'Drove product discovery, defined user personas, prioritized features based on coaching workflows, and managed the full product lifecycle from ideation to on-field adoption.',
+      outcome:
+        'Enabled 10x faster access to actionable insights, improved match preparation efficiency by 45%, and achieved adoption by over 80% of the coaching staff within three months.',
       gradient: 'from-teal-500 to-teal-700'
     },
     {
-      title: 'Marketing Intelligence Product',
+      title: 'AI-Powered Marketing Intelligence Platform',
       company: 'Fospha Marketing',
       icon: MessageSquare,
-      tools: ['LLM Integration', 'Business Analytics', 'Product Strategy', 'Agile SDLC'],
+      tools: ['LLM Integration', 'Product Strategy', 'Business Analytics', 'Agile Delivery'],
       industry: 'Marketing Technology',
-      problem: 'Marketing teams were overwhelmed with data from multiple channels but lacked actionable insights to optimize campaign performance and ROI.',
-      strategy: 'Developed comprehensive product strategy for AI-powered marketing intelligence platform using LLM technology, focusing on user experience and business value delivery through iterative Agile development.',
-      execution: 'Conducted market research, defined product roadmap using Agile SDLC, managed stakeholder relationships, and led product development to create intuitive analytics dashboard with LLM-powered insights.',
-      outcome: '60% reduction in campaign analysis time through LLM automation, 25% increase in campaign ROI, and 90% user satisfaction score across marketing teams leveraging Business Analytics.',
+      problem:
+        'Marketing teams were overwhelmed by multi-channel performance data but lacked timely, actionable insights to optimize campaigns and accurately measure ROI.',
+      strategy:
+        'Designed a product strategy centered on LLM-powered insights, simplifying campaign analysis and enabling marketers to make faster, data-informed decisions.',
+      execution:
+        'Led market research, defined a phased roadmap, collaborated with engineering teams, and delivered an intuitive analytics dashboard enhanced with AI-driven insights.',
+      outcome:
+        'Reduced campaign analysis time by 60%, increased marketing ROI by 25%, and achieved a 90% satisfaction score among platform users.',
       gradient: 'from-orange-500 to-orange-700'
     },
     {
-      title: 'Supply Chain Optimization Strategy',
+      title: 'Supply Chain Optimization Initiative',
       company: 'Allcargo Logistics',
       icon: Brain,
-      tools: ['Strategic Planning', 'Gen AI', 'Business Analytics', 'Product Lifecycle'],
+      tools: ['Strategic Planning', 'GenAI', 'Business Analytics', 'Product Execution'],
       industry: 'Logistics',
-      problem: 'Complex global supply chain operations were causing delivery delays and increased costs, requiring strategic product approach to optimize end-to-end processes.',
-      strategy: 'Led strategic product initiative using Gen AI and Business Analytics to optimize supply chain operations through data-driven insights, process redesign, and stakeholder alignment across global operations.',
-      execution: 'Managed product strategy development through complete product lifecycle, coordinated with international teams using Agile methodology, implemented performance tracking systems, and drove organizational change management.',
-      outcome: '30% reduction in delivery delays through Gen AI optimization, 18% decrease in operational costs, and improved customer satisfaction scores by 40% through data-driven Business Analytics.',
+      problem:
+        'Global supply chain complexity resulted in frequent delivery delays, rising operational costs, and limited real-time visibility across logistics operations.',
+      strategy:
+        'Led a strategic initiative leveraging GenAI and analytics to redesign supply chain workflows, improve visibility, and enable proactive decision-making.',
+      execution:
+        'Managed end-to-end product execution, collaborated with international teams, implemented performance tracking systems, and supported organizational change adoption.',
+      outcome:
+        'Reduced delivery delays by 30%, lowered operational costs by 18%, and improved customer satisfaction scores by 40% through data-driven optimization.',
       gradient: 'from-purple-500 to-purple-700'
     }
   ];
 
   return (
-    <section id="case-studies" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="case-studies" className="py-28 bg-gradient-to-br from-white via-blue-50 to-teal-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-teal-600 to-fuchsia-500 mb-6 drop-shadow-lg">
             Case Studies
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real-world product management challenges where I've delivered measurable business impact 
-            through Agile methodologies, Gen AI integration, and data-driven product decisions.
+          <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
+            Selected product case studies showcasing how I translate complex business challenges into scalable, AI-driven solutions with measurable outcomes.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -94,25 +109,25 @@ const CaseStudies = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 group cursor-pointer overflow-hidden">
+              <Card className="h-full group cursor-pointer overflow-hidden bg-white/60 backdrop-blur-xl border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-3xl relative">
                 <CardHeader className="relative">
-                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity rounded-3xl`} />
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-4">
-                      <div className={`p-3 rounded-lg bg-gradient-to-r ${project.gradient} text-white`}>
-                        <project.icon className="w-6 h-6" />
+                      <div className={`p-4 rounded-xl bg-gradient-to-br ${project.gradient} text-white shadow-lg`}>
+                        <project.icon className="w-7 h-7" />
                       </div>
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge variant="secondary" className="text-xs bg-white/80 text-blue-700 border-blue-200 shadow-sm px-3 py-1 rounded-full">
                         {project.industry}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl mb-2 group-hover:text-blue-700 transition-colors">
+                    <CardTitle className="text-2xl font-bold mb-2 group-hover:text-blue-700 transition-colors tracking-tight">
                       {project.title}
                     </CardTitle>
-                    <p className="text-sm text-blue-600 font-medium mb-4">{project.company}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="text-base text-blue-600 font-semibold mb-4">{project.company}</p>
+                    <div className="flex flex-wrap gap-2 mb-2">
                       {project.tools.map((tool) => (
-                        <Badge key={tool} variant="outline" className="text-xs">
+                        <Badge key={tool} variant="outline" className="text-xs bg-blue-50 text-blue-700 border-blue-200 px-2 py-1 rounded-full">
                           {tool}
                         </Badge>
                       ))}
@@ -121,28 +136,29 @@ const CaseStudies = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Business Challenge</h4>
-                    <p className="text-sm text-gray-600">{project.problem}</p>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-lg">Business Challenge</h4>
+                    <p className="text-base text-gray-700">{project.problem}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Product Strategy</h4>
-                    <p className="text-sm text-gray-600">{project.strategy}</p>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-lg">Product Strategy</h4>
+                    <p className="text-base text-gray-700">{project.strategy}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Product Execution</h4>
-                    <p className="text-sm text-gray-600">{project.execution}</p>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-lg">Product Execution</h4>
+                    <p className="text-base text-gray-700">{project.execution}</p>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-green-800 mb-2">Business Impact</h4>
-                    <p className="text-sm text-green-700">{project.outcome}</p>
+                  <div className="bg-gradient-to-r from-green-100 to-teal-100 p-6 rounded-2xl shadow-inner">
+                    <h4 className="font-semibold text-green-800 mb-2 text-lg">Business Impact</h4>
+                    <p className="text-base text-green-800 font-semibold">{project.outcome}</p>
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full group/btn mt-4"
+                  <Button
+                    variant="ghost"
+                    className="w-full group/btn mt-4 text-lg font-bold text-blue-700 hover:text-fuchsia-600 hover:bg-blue-50 rounded-full py-3"
                     onClick={() => handleViewCaseStudy(project.title, project.company)}
+                    aria-label={`View Case Study: ${project.title}`}
                   >
                     View Case Study
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </Card>

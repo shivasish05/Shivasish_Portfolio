@@ -70,7 +70,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-teal-100 px-4 py-2 rounded-full mb-6">
             <Award className="w-4 h-4 text-blue-600" />
@@ -79,9 +79,48 @@ const About = () => {
           <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-blue-700 to-teal-600 mb-6">
             Strategic Mind, Execution Focus
           </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-8">
             Management Consulting Analyst at Accenture, specializing in business transformation, supply chain optimization, and AI-enabled solutions. I bridge strategic thinking with hands-on execution to deliver measurable impact.
           </p>
+        </motion.div>
+
+        {/* Structured Summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 border border-blue-100">
+              <div className="grid md:grid-cols-3 gap-6 items-center">
+                <div className="md:col-span-2 space-y-4">
+                  <h3 className="text-2xl font-bold text-slate-800">My Approach</h3>
+                  <div className="space-y-3 text-slate-600">
+                    <p className="flex items-start gap-3">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="leading-relaxed">From data science foundations to strategic consulting, I've evolved to solve complex problems at the intersection of business and technology.</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="leading-relaxed">I excel at translating stakeholder needs into actionable strategies, leading cross-functional teams, and driving measurable business outcomes.</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="leading-relaxed">My strength lies in combining analytical rigor with human-centered problem-solving to create sustainable, scalable solutions.</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="md:col-span-1 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mb-3">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-sm text-slate-500 font-medium">Problem Solver</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Main Content Grid */}

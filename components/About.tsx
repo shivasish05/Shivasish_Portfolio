@@ -57,7 +57,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* Structured Summary */}
+        {/* Journey Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,32 +65,73 @@ const About = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 border border-blue-100">
-              <div className="grid md:grid-cols-3 gap-6 items-center">
-                <div className="md:col-span-2 space-y-4">
-                  <h3 className="text-2xl font-bold text-slate-800">My Approach</h3>
-                  <div className="space-y-3 text-slate-600">
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="leading-relaxed">From data science foundations to strategic consulting, I've evolved to solve complex problems at the intersection of business and technology.</span>
-                    </p>
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="leading-relaxed">I excel at translating stakeholder needs into actionable strategies, leading cross-functional teams, and driving measurable business outcomes.</span>
-                    </p>
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="leading-relaxed">My strength lies in combining analytical rigor with human-centered problem-solving to create sustainable, scalable solutions.</span>
-                    </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-lg">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                  From Data Science to Strategic Consulting: A Journey of Transformation
+                </h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full"></div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-800 mb-2">The Analytical Beginning</h4>
+                      <p className="text-slate-600 leading-relaxed">
+                        My journey started with a deep fascination for data and algorithms. As a fresh graduate, I immersed myself in machine learning and data science, believing that computational models held the key to solving complex problems.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-800 mb-2">The Realization</h4>
+                      <p className="text-slate-600 leading-relaxed">
+                        Working at Exponentia.ai opened my eyes to the bigger picture. Technology wasn't just an end in itself—it was an enabler for business transformation. I learned that the most impactful solutions come from understanding people, processes, and organizational dynamics.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="md:col-span-1 text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mb-3">
-                    <Award className="w-8 h-8 text-white" />
+
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      3
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-800 mb-2">The Evolution</h4>
+                      <p className="text-slate-600 leading-relaxed">
+                        At Blenheim Chalcot, I experienced the world of strategic consulting across diverse industries. This exposure taught me the art of stakeholder management, structured problem-solving frameworks, and translating insights into actionable strategies.
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-sm text-slate-500 font-medium">Problem Solver</div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-teal-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                      4
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-800 mb-2">The Synthesis</h4>
+                      <p className="text-slate-600 leading-relaxed">
+                        Today at Accenture, I bring this holistic perspective to every engagement. I operate at the intersection of business strategy, technology, and execution—helping organizations navigate digital transformation while delivering measurable impact.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-white/50 rounded-2xl border border-slate-200">
+                <p className="text-slate-700 text-center font-medium italic">
+                  "My transformation taught me that the most meaningful impact comes from combining technical expertise with strategic thinking and unwavering commitment to results."
+                </p>
               </div>
             </div>
           </div>

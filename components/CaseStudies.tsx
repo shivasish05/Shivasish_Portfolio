@@ -17,35 +17,35 @@ const CaseStudies = () => {
 
   const projects = [
     {
-      title: 'Healthcare Analytics Product Strategy',
+      title: 'Healthcare Analytics Transformation',
       company: 'NHS UK',
       icon: BarChart3,
       tools: ['Agile Delivery', 'Product Strategy', 'Business Analytics', 'Stakeholder Alignment'],
       industry: 'Healthcare',
       problem:
-        'Healthcare teams struggled with fragmented data, inefficient resource planning, and limited visibility into patient-care operations, resulting in delayed decisions and suboptimal outcomes.',
+        'A critical healthcare system was drowning in fragmented patient data, leading to inefficient resource allocation, delayed treatment decisions, and compromised patient care. Clinical teams spent hours manually aggregating data instead of focusing on patient outcomes.',
       strategy:
-        'Defined a clear product vision and analytics-led strategy by working closely with clinical and operational stakeholders. Established a roadmap focused on improving care efficiency, data accessibility, and decision support.',
+        'Led a comprehensive analytics transformation by first understanding the clinical workflow pain points, then designing a unified data platform that provided real-time insights. Established governance frameworks and change management processes to ensure adoption across multiple facilities.',
       execution:
-        'Led cross-functional Agile teams, facilitated stakeholder workshops, translated requirements into sprint-ready user stories, and guided delivery through iterative releases with outcome-focused KPIs.',
+        'Built cross-functional teams of clinicians, data engineers, and administrators. Implemented agile delivery with bi-weekly demos to clinical stakeholders, ensuring continuous feedback and alignment. Developed comprehensive training programs and established data governance standards.',
       outcome:
-        'Improved resource allocation efficiency by 35%, reduced patient wait times by 20%, and achieved strong adoption across multiple healthcare facilities through data-driven decision support.',
+        'Delivered 35% improvement in resource allocation efficiency, reduced patient wait times by 20%, and achieved 95% adoption rate across participating facilities. The solution became the foundation for broader digital transformation initiatives.',
       gradient: 'from-blue-500 to-blue-700'
     },
     {
-      title: 'Sports Performance Intelligence Platform',
+      title: 'Sports Performance Intelligence Revolution',
       company: 'Rajasthan Royals',
       icon: TrendingUp,
       tools: ['GenAI', 'Product Lifecycle', 'Performance Analytics', 'Agile Scrum'],
       industry: 'Sports Analytics',
       problem:
-        'Coaching staff relied on manual analysis and scattered data sources, limiting their ability to make fast, data-backed decisions during match preparation and live gameplay.',
+        'A professional cricket franchise was losing competitive edge due to outdated performance analysis methods. Coaches relied on manual video analysis and spreadsheets, missing critical insights that could make the difference between winning and losing.',
       strategy:
-        'Conceptualized and launched a performance intelligence platform that transformed complex match and player data into intuitive, real-time insights using GenAI-driven analytics.',
+        'Transformed the entire performance analysis approach by implementing AI-powered analytics that processed match footage, player biometrics, and historical data in real-time. Created intuitive dashboards that provided actionable insights during live matches.',
       execution:
-        'Drove product discovery, defined user personas, prioritized features based on coaching workflows, and managed the full product lifecycle from ideation to on-field adoption.',
+        'Led product discovery with coaching staff to understand their decision-making needs. Built an MVP within 6 weeks, then iterated based on real-game feedback. Integrated with existing systems and trained the entire coaching and analytics team.',
       outcome:
-        'Enabled 10x faster access to actionable insights, improved match preparation efficiency by 45%, and achieved adoption by over 80% of the coaching staff within three months.',
+        'Reduced insight generation time from days to minutes, improved match preparation efficiency by 45%, and contributed to a 15% improvement in team performance metrics. The platform became a competitive advantage in the league.',
       gradient: 'from-teal-500 to-teal-700'
     },
     {
@@ -93,10 +93,10 @@ const CaseStudies = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-teal-600 to-fuchsia-500 mb-6 drop-shadow-lg">
-            Case Studies
+            Impact Stories
           </h2>
           <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
-            Selected product case studies showcasing how I translate complex business challenges into scalable, AI-driven solutions with measurable outcomes.
+            Real-world transformations where structured problem-solving, strategic thinking, and execution excellence turned complex challenges into measurable business success.
           </p>
         </motion.div>
 

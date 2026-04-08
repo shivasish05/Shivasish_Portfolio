@@ -26,54 +26,54 @@ const Services = () => {
 
   const services = [
     {
-      title: 'GenAI Product Strategy & Advisory',
+      title: 'Business Problem Solving & Strategy',
       icon: Brain,
       description:
-        'I help organizations define clear, executable GenAI product strategies — aligning business goals, user needs, and technical feasibility to ensure AI initiatives deliver real value.',
+        'I help organizations tackle complex business challenges through structured problem-solving, stakeholder collaboration, and data-driven strategy definition. From problem framing to solution design, I ensure clarity and alignment across teams.',
       features: [
-        'GenAI & LLM product positioning',
-        'Use-case discovery & prioritization',
-        'Agile delivery frameworks',
-        'Product-market fit validation'
+        'Structured problem analysis & framing',
+        'Stakeholder workshops & alignment',
+        'Strategic roadmap development',
+        'Business case & impact modeling'
       ],
       gradient: 'from-blue-500 to-blue-700'
     },
     {
-      title: 'End-to-End Product Lifecycle Execution',
+      title: 'Supply Chain & Operations Transformation',
       icon: Rocket,
       description:
-        'From idea to production, I lead products through discovery, MVP definition, delivery, and iteration — ensuring speed, clarity, and measurable outcomes.',
+        'I lead supply chain optimization and operational transformation initiatives. By combining process analysis, data insights, and change management, I help organizations reduce costs, improve efficiency, and enhance decision-making.',
       features: [
-        'MVP scoping & roadmap planning',
-        'Scrum & Agile execution',
-        'Cross-functional team leadership',
-        'Delivery timelines & risk management'
+        'Supply chain optimization & redesign',
+        'Process mapping & automation',
+        'Performance analytics & KPI design',
+        'Change management & adoption'
       ],
       gradient: 'from-teal-500 to-teal-700'
     },
     {
-      title: 'Product Strategy, Analytics & Decision Systems',
+      title: 'AI/GenAI Enablement & Implementation',
       icon: Map,
       description:
-        'I design data-driven product strategies that help teams make better decisions using analytics, KPIs, and clear performance signals.',
+        'I guide organizations in adopting AI and GenAI solutions responsibly and effectively. From use-case identification to implementation roadmapping, I ensure AI initiatives deliver measurable business value and align with organizational goals.',
       features: [
-        'Data-driven product strategy',
-        'Analytics-backed roadmap planning',
-        'Stakeholder alignment workshops',
-        'KPI & success metrics design'
+        'AI use-case discovery & prioritization',
+        'Implementation roadmap development',
+        'Operating model design',
+        'Technology & vendor evaluation'
       ],
       gradient: 'from-orange-500 to-orange-700'
     },
     {
-      title: 'Digital Transformation & AI Enablement',
+      title: 'Data-Driven Decision Making & Analytics',
       icon: TrendingUp,
       description:
-        'Advisory support for organizations adopting AI — helping leadership teams navigate change, align teams, and implement scalable AI solutions responsibly.',
+        'I develop analytics frameworks and dashboarding systems that empower organizations to make faster, data-backed decisions. By translating data into actionable insights, I enable better business outcomes and strategic alignment.',
       features: [
-        'AI adoption & transformation strategy',
-        'Operating model & process alignment',
-        'Agile change management',
-        'Technology & platform recommendations'
+        'Analytics framework & KPI design',
+        'Dashboard & reporting development',
+        'Performance monitoring systems',
+        'Executive decision support'
       ],
       gradient: 'from-purple-500 to-purple-700'
     }
@@ -106,11 +106,10 @@ const Services = () => {
             </span>
           </motion.div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
-            How I Help Teams Succeed
+            Consulting & Advisory Services
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            I work with teams to design, build, and scale AI-driven products — combining strong product thinking,
-            GenAI expertise, and disciplined execution.
+            I help organizations solve complex business challenges, optimize operations, and enable AI transformation. From strategy to execution, I deliver measurable outcomes.
           </p>
         </motion.div>
 

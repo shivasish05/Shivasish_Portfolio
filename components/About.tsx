@@ -8,23 +8,23 @@ const About = () => {
   const highlights = [
     {
       icon: Target,
-      title: '3+ Years of Impact',
-      description: 'Hands-on experience delivering GenAI products, business analytics solutions, and end-to-end product initiatives across multiple industries'
+      title: 'Strategic Problem Solver',
+      description: 'I excel at breaking down complex business challenges into actionable frameworks, using structured problem-solving to identify root causes and develop scalable solutions that drive measurable impact.'
     },
     {
       icon: TrendingUp,
-      title: 'Business-Driven Outcomes',
-      description: 'Built and delivered AI-powered solutions using LLMs, RAG pipelines, and analytics frameworks that translated directly into measurable business results'
+      title: 'Business & Technology Bridge',
+      description: 'I seamlessly connect business objectives with technological capabilities, ensuring that AI, data analytics, and digital solutions deliver real value and align with organizational goals.'
     },
     {
       icon: Users,
       title: 'Cross-Functional Leadership',
-      description: 'Proven ability to lead and align engineers, data scientists, and business stakeholders within Agile and Scrum-driven environments'
+      description: 'I thrive in collaborative environments, leading diverse teams through change initiatives, managing stakeholder expectations, and fostering alignment across technical and business functions.'
     },
     {
       icon: Lightbulb,
-      title: 'Product & Innovation Mindset',
-      description: 'Focused on converting emerging GenAI capabilities into secure, scalable, and market-ready enterprise products'
+      title: 'Execution Excellence',
+      description: 'I combine strategic thinking with hands-on execution, ensuring that innovative ideas translate into tangible outcomes through disciplined project management and continuous improvement.'
     }
   ];
 
@@ -42,7 +42,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
-            Project Manager specializing in Generative AI and business analytics, focused on building enterprise-grade AI products that solve real-world problems and deliver measurable business value.
+            Management Consulting Analyst at Accenture specializing in business transformation, supply chain optimization, and AI-enabled solutions. I solve complex problems through structured approaches, data-driven insights, and strategic execution.
           </p>
         </motion.div>
 
@@ -54,13 +54,19 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-blue-700 mb-6 tracking-tight">
-              My Journey
+              From Data Science to Strategic Consulting: A Journey of Transformation
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              I started my journey with a strong technical foundation in Generative AI and business analytics and gradually evolved into a product-focused delivery leader. Over the years, I’ve worked across diverse domains including healthcare, logistics, marketing technology, fintech, and enterprise analytics, delivering solutions within Agile and Scrum-driven environments.
+              My journey began with a deep fascination for data and technology. As a fresh graduate, I dove headfirst into the world of machine learning and data science, believing that algorithms and models held the key to solving complex problems. Little did I know that my path would lead me to discover something even more powerful: the art of strategic thinking and human-centered problem-solving.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              At Exponentia.ai, I transitioned from being a machine learning engineer to leading product delivery initiatives. This shift opened my eyes to the bigger picture — how technology serves as an enabler for business transformation, not just an end in itself. I learned that the most impactful solutions come from understanding stakeholder needs, aligning cross-functional teams, and driving execution with clarity and purpose.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              My time at Blenheim Chalcot exposed me to the world of strategic consulting across multiple industries. Working with diverse teams and tackling complex challenges taught me the value of structured problem-solving frameworks, stakeholder management, and the ability to translate insights into actionable strategies. I discovered that my strength lies not just in technical expertise, but in bridging the gap between business objectives and technological solutions.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              My core strength lies in bridging the gap between advanced AI capabilities and business objectives. I work closely with stakeholders and engineering teams to ensure AI-driven products are not only technically robust, but also aligned with operational goals, governance standards, and long-term business impact.
+              Today, as a Management Consulting Analyst at Accenture, I bring this holistic perspective to every engagement. I work at the intersection of business strategy, technology, and execution — helping organizations navigate digital transformation, optimize supply chains, and unlock the potential of AI-driven solutions. My journey has taught me that the most meaningful impact comes from combining technical acumen with strategic thinking and unwavering commitment to results.
             </p>
           </motion.div>
 

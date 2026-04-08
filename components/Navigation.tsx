@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -28,15 +28,6 @@ const Navigation = () => {
       });
     }
     setIsOpen(false);
-  };
-
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Shivasish_Resume.pdf';
-    link.download = 'Shivasish_Mahapatra_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const navItems = [
@@ -83,16 +74,6 @@ const Navigation = () => {
                 {item.name}
               </motion.a>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleResumeDownload}
-              className="ml-4 px-6 py-2.5 rounded-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 shadow-lg flex items-center gap-2"
-              aria-label="Download Resume"
-            >
-              <Download className="w-5 h-5" />
-              Resume
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -129,16 +110,6 @@ const Navigation = () => {
                   {item.name}
                 </motion.a>
               ))}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleResumeDownload}
-                className="w-full px-4 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 mt-4 text-lg font-semibold rounded-lg text-white transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
-                aria-label="Download Resume"
-              >
-                <Download className="w-5 h-5" />
-                Resume
-              </motion.button>
             </div>
           </motion.div>
         )}

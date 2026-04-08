@@ -1,19 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Shivasish_Resume.pdf';
-    link.download = 'Shivasish_Mahapatra_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const handleLetsTalk = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -24,12 +15,14 @@ const Hero = () => {
     }
   };
 
-  const handleHireMe = () => {
-    const subject = encodeURIComponent('Product Manager Opportunity');
-    const body = encodeURIComponent(
-      'Hi Shivasish,\n\nI would like to explore a Product / AI leadership opportunity with you.\n\nBest regards,'
-    );
-    window.open(`mailto:mahapatrashiv05@gmail.com?subject=${subject}&body=${body}`);
+  const handleExploreOpportunities = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
 
   return (
@@ -91,7 +84,7 @@ const Hero = () => {
             className="inline-block mb-6"
           >
             <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/50 text-purple-300 text-sm font-semibold backdrop-blur-sm">
-              Building real-world GenAI products
+              Consulting Analyst at Accenture | Strategy & Transformation
             </span>
           </motion.div>
 
@@ -112,7 +105,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Project Manager · GenAI Delivery · Product & Business Strategy
+            Management Consultant · Problem Solver · Business Transformation
           </motion.p>
 
           <motion.p
@@ -121,9 +114,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            I design and deliver AI-powered products that solve real business problems — from strategy and discovery to production rollout.
+            I help organizations solve complex business challenges through structured problem-solving, data-driven insights, and strategic execution. Specializing in supply chain optimization, operational transformation, and AI-enabled business solutions.
             <br className="hidden md:inline" />
-            Experienced in translating complex GenAI systems into scalable, measurable outcomes using strong product execution.
+            Bridging strategy and execution to drive measurable outcomes.
           </motion.p>
 
           <motion.div
@@ -133,7 +126,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
-              onClick={handleResumeDownload}
+              onClick={handleLetsTalk}
               className="group relative px-8 py-4 font-semibold text-lg text-white overflow-hidden rounded-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -141,33 +134,22 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 group-hover:from-purple-700 group-hover:to-cyan-700 transition-all duration-300" />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-300" />
               <div className="relative flex items-center gap-2">
-                <Download className="w-5 h-5" />
-                Download Resume
+                <MessageCircle className="w-5 h-5" />
+                Let's Connect
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </motion.button>
 
             <motion.button
-              onClick={handleLetsTalk}
+              onClick={handleExploreOpportunities}
               className="group relative px-8 py-4 font-semibold text-lg text-white overflow-hidden rounded-xl border-2 border-cyan-400/50 hover:border-cyan-400"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10 group-hover:from-cyan-600/20 group-hover:to-purple-600/20" />
               <div className="relative flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                Let’s Talk
+                Explore Opportunities
               </div>
-            </motion.button>
-
-            <motion.button
-              onClick={handleHireMe}
-              className="group relative px-8 py-4 font-semibold text-lg text-white overflow-hidden rounded-xl"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 group-hover:from-pink-700 group-hover:to-purple-700 transition-all duration-300" />
-              <div className="relative">Explore Opportunities</div>
             </motion.button>
           </motion.div>
 
@@ -183,40 +165,15 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">20+</div>
-              <div className="text-gray-400 mt-2">Products & Initiatives</div>
+              <div className="text-gray-400 mt-2">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Global</div>
-              <div className="text-gray-400 mt-2">Client Exposure</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">5+</div>
+              <div className="text-gray-400 mt-2">Industries Served</div>
             </div>
           </motion.div>
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity }}
-          className="w-7 h-12 border-2 border-gradient-to-b from-purple-400 to-cyan-400 rounded-full flex justify-center cursor-pointer backdrop-blur-md bg-white/5 hover:bg-white/10"
-          onClick={() => {
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-              aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }}
-        >
-          <motion.div
-            animate={{ y: [0, 14, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
-            className="w-1.5 h-3 bg-gradient-to-b from-purple-400 to-cyan-400 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send, Download, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,15 +26,6 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
-  };
-
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Shivasish_Resume.pdf';
-    link.download = 'Shivasish_Mahapatra_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -192,24 +183,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-blue-700 text-white p-6 rounded-xl"
-            >
-              <h4 className="font-semibold mb-2">Download Resume</h4>
-              <p className="text-blue-100 text-sm mb-4">
-                A concise overview of my experience, projects, and leadership journey.
-              </p>
-              <Button
-                variant="secondary"
-                className="bg-white text-blue-700 hover:bg-gray-100"
-                onClick={handleResumeDownload}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}

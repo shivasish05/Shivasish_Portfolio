@@ -8,78 +8,71 @@ import { Briefcase, Code2, BarChart3, Users } from 'lucide-react';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Product & Business',
+      title: 'Consulting & Delivery',
       icon: Briefcase,
       color: 'blue',
       skills: [
-        'Agile Product Delivery',
-        'Scrum & Sprint Execution',
-        'End-to-End Product Lifecycle',
-        'MVP Definition & Validation',
-        'Go-To-Market Strategy',
-        'Product Roadmapping',
-        'Prioritization (RICE, MoSCoW)',
-        'Stakeholder & Client Management',
-        'Jira',
-        'Notion',
-        'Confluence',
-        'Figma',
-        'Miro'
+        'Project Management',
+        'Business Analysis',
+        'Stakeholder Management',
+        'Process Optimization',
+        'Agile Execution',
+        'Problem Solving',
+        'Requirement Definition',
+        'Roadmap Planning',
+        'Change Management',
+        'Executive Communication'
       ]
     },
     {
-      title: 'GenAI & Technology',
+      title: 'Supply Chain & Operations',
       icon: Code2,
       color: 'teal',
       skills: [
-        'Generative AI Systems',
-        'Prompt Engineering',
-        'LLM Integration',
-        'RAG Architectures',
-        'LangChain',
-        'FastAPI',
-        'API Design & Integration',
-        'Machine Learning Fundamentals',
-        'Python',
-        'SQL',
-        'Azure OpenAI',
-        'Databricks',
-        'MongoDB',
-        'Vector Databases & Search'
+        'Supply Chain Management',
+        'Operations Optimization',
+        'Process Mapping',
+        'Performance Improvement',
+        'Cost Optimization',
+        'Logistics',
+        'Vendor Management',
+        'Operating Model Design',
+        'Process Automation',
+        'Workflow Optimization'
       ]
     },
     {
-      title: 'Analytics & Insights',
+      title: 'Data & Technology',
       icon: BarChart3,
       color: 'orange',
       skills: [
-        'Business & Product Analytics',
-        'Data Analysis',
-        'Power BI',
-        'Tableau',
-        'Data Modeling',
-        'Statistical Thinking',
-        'KPI & Metrics Design',
+        'Data Analytics',
+        'SQL',
+        'Python',
         'Dashboarding & Reporting',
-        'Performance Monitoring',
-        'Google Analytics'
+        'AI/GenAI Systems',
+        'Machine Learning',
+        'Data Modeling',
+        'Statistical Analysis',
+        'Business Intelligence',
+        'ETL & Data Pipeline'
       ]
     },
     {
-      title: 'Leadership & Strategy',
+      title: 'Tools & Platforms',
       icon: Users,
       color: 'purple',
       skills: [
-        'Product & Platform Strategy',
-        'Cross-Functional Leadership',
-        'Strategic Problem Solving',
-        'Customer Journey Mapping',
-        'OKRs & Outcome Tracking',
-        'Executive Communication',
-        'Business Storytelling',
-        'Decision Making Under Ambiguity',
-        'Change & Transformation Management',
-        'Mentoring & Team Enablement'
+        'Power BI',
+        'Tableau',
+        'Databricks',
+        'AWS',
+        'Jira',
+        'Confluence',
+        'Figma',
+        'Miro',
+        'Excel/VBA',
+        'Notion'
       ]
     }
   ];
@@ -124,8 +117,7 @@ const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-2xl text-gray-700 max-w-3xl mx-auto font-medium">
-            A balanced blend of product leadership, GenAI systems, analytics, and strategic thinking —
-            enabling teams to build scalable products and deliver measurable business outcomes.
+            A balanced combination of consulting expertise, supply chain knowledge, data analytics, and technology acumen — enabling organizations to solve complex problems and drive measurable outcomes.
           </p>
         </motion.div>
 
